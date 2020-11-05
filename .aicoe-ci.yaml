@@ -1,0 +1,10 @@
+# Setup and configuring aicoe-ci with configuration file `.aicoe-ci.yaml`
+check:
+  - thoth-build
+build:
+  base-image: registry.access.redhat.com/ubi8/ubi:latest
+  custom_tag: latest # custom tag to be push to registry
+  registry: quay.io # Imgage registry to be used. (default: quay.io)
+  registry-org: martin_povolny # Organization to be used in Image Registry. (default: thoth-station)
+  registry-project: colaboratory # Project Repository in Image Registry to be used to push image.
+  registry-secret: martin-povolny-pusher-secret # thoth-station-thoth-pusher-secret # pre-exists in ci
